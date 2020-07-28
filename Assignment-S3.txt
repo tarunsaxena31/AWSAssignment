@@ -1,0 +1,21 @@
+C:\Users\Tarun-PC\Documents\fpg-v3-spark>AWS configure
+AWS Access Key ID [****************T3ZQ]: *************************
+AWS Secret Access Key [****************2a03]: *********************
+Default region name [us-west-1]: **************
+Default output format [text]: text
+
+C:\WINDOWS\system32>aws s3 ls s3://mydataupload/S3.txt
+2020-07-27 23:34:41         23 S3.txt
+
+
+
+C:\Users\Tarun-PC\Documents\fpg-v3-spark>aws s3 cp AWSCLI.txt s3://mydataupload/
+upload: .\AWSCLI.txt to s3://mydataupload/AWSCLI.txt
+
+
+C:\Users\Tarun-PC\Documents\fpg-v3-spark>aws s3 rm s3://mydataupload/AWSCLI.txt
+delete: s3://mydataupload/AWSCLI.txt
+
+C:\Users\Tarun-PC\Documents\fpg-v3-spark>aws s3 mb s3://mybucket2807
+make_bucket: mybucket2807
+
