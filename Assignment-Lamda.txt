@@ -1,0 +1,29 @@
+aws lambda list-functions --max-items 10
+
+C:\fpg-v3-spark>aws lambda create-function --function-name my-function --runtime nodejs10.x --zip-file fileb://my-function.zip --handler my-function.handler --role arn:aws:iam::549260685206:role/service-role/TranscTest-role-zf1ijhmk
+{
+    "FunctionName": "my-function",
+    "FunctionArn": "arn:aws:lambda:ap-south-1:549260685206:function:my-function",
+    "Runtime": "nodejs10.x",
+    "Role": "arn:aws:iam::549260685206:role/service-role/TranscTest-role-zf1ijhmk",
+    "Handler": "my-function.handler",
+    "CodeSize": 285,
+    "Description": "",
+    "Timeout": 3,
+    "MemorySize": 128,
+    "LastModified": "2020-07-29T18:59:43.215+0000",
+    "CodeSha256": "mxBE8lWF5elog1NV1DW1WUjXHIHXCcjS3Q6lg/xkWTo=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "5ad3045d-c541-418b-9cb2-3c02ff07ab89",
+    "State": "Active",
+    "LastUpdateStatus": "Successful"
+}
+
+C:\fpg-v3-spark>aws lambda invoke --function-name my-function out
+{
+    "StatusCode": 200,
+    "ExecutedVersion": "$LATEST"
+}
